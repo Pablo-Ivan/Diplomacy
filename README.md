@@ -1,0 +1,2 @@
+# Diplomacy
+An academic app.

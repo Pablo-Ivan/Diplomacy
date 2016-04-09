@@ -112,6 +112,7 @@
   </footer>
 </div>
 <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
 <script>
 openCity("Español")
 function openCity(cityName) {
@@ -133,10 +134,9 @@ function w3_close() {
   document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
   document.getElementsByClassName("w3-opennav")[0].style.display = "inline-block";
 }
-	var list = new Firebase("https://diploma-cy.firebaseio.com/");
+	var list = new Firebase("https://diploma-cy.firebaseio.com");
 	var publicar = function() {
-		var mail = document.getElementById("userMail");
-		var mailValue = mail.val();
+		var mail = $("userMail").val();
 		list.push({
       email: mailValue
     })

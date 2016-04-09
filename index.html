@@ -5,12 +5,102 @@
     <title>Diplomacy</title>
     <link rel="stylesheet" href="stylesheets/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <div class="w3-container">
-      <div class="w3-card-4">
-        <p>Aplicación Web en construcción.</p>
-      </div>
-    </div>
+    <nav class="w3-sidenav w3-white w3-card-2" style="display:none">
+  <a href="javascript:void(0)" 
+  onclick="w3_close()"
+  class="w3-closenav w3-large">Cerrar &times;</a>
+  <a href="#">Español</a>		
+  <a href="#">Matemáticas</a>		
+  <a href="#">Historia</a>		
+  <a href="#">Ciencias</a>		
+</nav>
+
+<div id="main">
+
+<header class="w3-container w3-teal">
+  <span class="w3-opennav w3-xlarge" onclick="w3_open()">&#9776;</span>
+  <h1 class="w3-center">Diplomacy</h1>
+	<h5 class="w3-center">Una Aplicación Académica</h5>
+</header>
+<div class="w3-container">
+  <p class="w3-justify">
+		Diplomacy es una aplicación que surge con la creciente adicción a los medios tecnológicos como lo son el celular y la computadora. Los estudiantes de este mundo moderno pierden el interés en el aprendizaje clásico y gradualmente se va haciendo la transición en las escuelas de lo antiguo a lo moderno. Diplomacy está para facilitar el cambio y brindar una herramienta útil y relevante tanto al estudiante como al profesor.
+	</p>
+	<!--tabs-->
+	<h2>Situaciones de Uso</h2>
+	<ul class="w3-navbar w3-teal">
+  	<li>
+			<a href="#" onclick="openCity('Español')">Español</a>
+		</li>
+  	<li>
+			<a href="#" onclick="openCity('Matematicas')">Matemáticas</a>		</li>
+  	<li>
+			<a href="#" onclick="openCity('Historia')">Historia</a>
+		</li>
+		<li>
+			<a href="#" onclick="openCity('Ciencias')">Ciencias</a>
+		</li>
+	</ul>
+
+<div id="Español" class="w3-container city">
+  <h2>Español</h2>
+  <p class="w3-justify">En la clase se está viendo el tema del Vanguardismo, sin embargo el profesor se da cuenta de que los estudiantes están en su celular, este inmediatamente puede enviar documentos, notas o incluso alertas (para que el alumno preste atención) directo a la aplicación que el usuario descargó. Así pues, el alumno ve en tiempo real algunos ejercicios relacionados a vanguardismo y los resuelve para ser enviados al profesor.</p>
+</div>
+
+<div id="Matematicas" class="w3-container city">
+  <h2>Matemáticas</h2>
+  <p>El profesor puede enviar los ejercicios vistos en clase con ayuda del editor de ecuaciones, y así los usuarios pueden tomar cuantas veces quieran repasos de la clase, además pueden entrar en el modo de entrenamiento, y los pasos a resolver las ecuaciones se muestran. Los usuarios también tienen foros dentro de la misma anotación para compartir sus soluciones o preguntar sus dudas al resto de sus compañeros.</p> 
+</div>
+
+<div id="Historia" class="w3-container city">
+  <h2>Historia</h2>
+  <p>El tema es la llegada de Cortés, el profesor de historia puede enviar a sus alumnos un mapa interactivo que muestra el paso de Hernán Cortés sobre la ciudad de México. Además puede "marcar" algunas secciones en el mapa, cuando el usuario seleccione esa sección, será llevado a algún ejercicio, video o artículo de interés.</p>
+</div>
+	
+	<div id="Ciencias" class="w3-container city">
+		<h2>Ciencias</h2>
+		<p>
+			En la clase de química se está viendo el balanceo de ecuaciones, el estudiante puede buscar en la biblioteca digital de Diplomacy el tema y recibe toda clase de información y guías, junto con los ejercicios que el profesor pueda poner.
+		</p>
+	</div>
+</div>
+
+<footer class="w3-container w3-center w3-teal">
+  <h5>&copy; Diplomacy. Derechos Reservados.</h5>
+  <h6>
+		Pablo Iván G. Soto <br>
+		Aldo G. Cabrera Aguilera <br>
+		Erick Mauricio M. Valdéz <br>
+		Ingrid Y. Bautista Zúñiga <br>
+		Elioth Fernando R. Rodríguez
+	</h6>
+</footer>
+
+</div>   
+<script>
+openCity("Español")
+function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+ document.getElementById(cityName).style.display = "block";  
+}
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementsByClassName("w3-sidenav")[0].style.width = "25%";
+  document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+  document.getElementsByClassName("w3-opennav")[0].style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+  document.getElementsByClassName("w3-opennav")[0].style.display = "inline-block";
+}
+</script>
   </body>
 </html>

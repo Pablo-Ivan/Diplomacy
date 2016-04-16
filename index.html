@@ -118,7 +118,7 @@
 <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
 <script>
-openCity("Español")
+openCity("Español");
 function openCity(cityName) {
     var i;
     var x = document.getElementsByClassName("city");
@@ -135,7 +135,7 @@ function openCity(cityName) {
       		user: "Yes"
     		});
     		$('#userMail').val('');
-    		alert("¡Excelente! Te haremos saber cuando Diplomacy esté listo");
+    		alert("¡Excelente! Te haremos saber cuando Diplomacy esté listo.");
 			}
 			listRef.on('child_added', function(snapshot) {
     		var message = snapshot.val();

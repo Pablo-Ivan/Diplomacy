@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Una App Académica">
-		<meta name="keywords" content="Programming, Diplomacy, Pablo Ivan G. Soto">
+    <meta name="keywords" content="Programming, Diplomacy, Pablo Ivan G. Soto">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Diplomacy</title>
     <link rel="icon" href="fixedlogo.jpg">
     <link rel="stylesheet" href="stylesheets/w3.css">
@@ -32,6 +34,7 @@
 	<h5 class="w3-center">Una Aplicación Académica</h5>
 </header>
 <div class="w3-container">
+  <button class="w3-button" onclick="toogleFullScreen()">Fullscreen</button>
   <p class="w3-justify">
 		Diplomacy es una aplicación que surge con la creciente adicción a 
 		los medios tecnológicos como lo son el celular y la computadora. 
@@ -140,6 +143,20 @@ function openCity(cityName) {
 			listRef.on('child_added', function(snapshot) {
     		var message = snapshot.val();
   		});
+   function toggleFullScreen() {
+  var doc = window.document;
+  var docEl = doc.documentElement;
+
+  var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+  var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+  if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+    requestFullScreen.call(docEl);
+  }
+  else {
+    cancelFullScreen.call(doc);
+  }
+}
 		</script>
   </body>
 </html>

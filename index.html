@@ -34,7 +34,7 @@
 	<h5 class="w3-center">Una Aplicación Académica</h5>
 </header>
 <div class="w3-container">
-  <button class="w3-button" onclick="toogleFullScreen()">Fullscreen</button>
+  <button class="w3-btn" onclick="fullscreen()">Fullscreen</button>
   <p class="w3-justify">
 		Diplomacy es una aplicación que surge con la creciente adicción a 
 		los medios tecnológicos como lo son el celular y la computadora. 
@@ -143,20 +143,19 @@ function openCity(cityName) {
 			listRef.on('child_added', function(snapshot) {
     		var message = snapshot.val();
   		});
-   function toggleFullScreen() {
-  var doc = window.document;
-  var docEl = doc.documentElement;
-
-  var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
-  var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
-
-  if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
-    requestFullScreen.call(docEl);
-  }
-  else {
-    cancelFullScreen.call(doc);
-  }
-}
+		</script>
+		<script>
+			function fullscreen() {
+  			var doc = window.document;
+  			var docEl = doc.documentElement;
+  			var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+  			var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+  			if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+    			requestFullScreen.call(docEl);
+  			} else {
+    			cancelFullScreen.call(doc);
+  			}
+			}
 		</script>
   </body>
 </html>

@@ -1,1 +1,36 @@
 <!DOCTYPE html>
+<html data-ng-app="loginApp">
+	<head>
+		<meta charset="utf-8">
+		<title>Login</title>
+	</head>
+	<body>
+		<button><a href="/#/login">Login</a></button>
+		<button><a href="/#/signup">Sign Up</a></button>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-route.js"></script>
+		<script src="https://app.userapp.io/js/userapp.client.js"></script>
+		<script src="https://app.userapp.io/js/angularjs.userapp.js"></script>
+		<script>
+			var app = angular.module("loginApp", ["ngRoute", "userApp"]);
+			app.run(function(user) {
+				user.init({ appId: '571da452ba98d' });
+			});
+			app.config(['$routeProvider',
+  		function($routeProvider) {
+    		$routeProvider.
+      		when('/login', {
+        		templateUrl: 'login.html',
+        		login: true
+      		}).
+      		when('/signup', {
+        		templateUrl: 'signup.html',
+        		public: true
+      		}).
+      		otherwise({
+        		redirectTo: '/login'
+      		});
+  		}]);
+		</script>
+	</body>
+</html>

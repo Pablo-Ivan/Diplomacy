@@ -117,44 +117,50 @@
     </p>
   </footer>
 </div>
-<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
 <script>
-openCity("Español");
-function openCity(cityName) {
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCv9LgDPTeEmToZy_NEWHWWI52umDxARcA",
+    authDomain: "diploma-cy.firebaseapp.com",
+    databaseURL: "https://diploma-cy.firebaseio.com",
+    storageBucket: "diploma-cy.appspot.com",
+  };
+  firebase.initializeApp(config);
+  var listRef = firebase.database().ref();
+	var publicar = function() {
+		var mail = $('#userMail').val();
+		listRef.push({
+      email: mail,
+      user: "Yes"
+    });
+    $('#userMail').val('');
+    window.alert("¡Excelente! Te haremos saber cuando Diplomacy esté listo.");
+	}
+	listRef.on('child_added', function(snapshot) {
+    var message = snapshot.val();
+  });
+  openCity("Español");
+	function openCity(cityName) {
     var i;
     var x = document.getElementsByClassName("city");
     for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
+      x[i].style.display = "none";  
     }
- document.getElementById(cityName).style.display = "block";  
-}
-				var listRef = new Firebase('https://diploma-cy.firebaseio.com');
-				var publicar = function() {
-				var mail = $('#userMail').val();
-				listRef.push({
-      		email: mail,
-      		user: "Yes"
-    		});
-    		$('#userMail').val('');
-    		alert("¡Excelente! Te haremos saber cuando Diplomacy esté listo.");
-			}
-			listRef.on('child_added', function(snapshot) {
-    		var message = snapshot.val();
-  		});
-		</script>
-		<script>
-			function fullscreen() {
-  			var doc = window.document;
-  			var docEl = doc.documentElement;
-  			var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
-  			var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
-  			if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
-    			requestFullScreen.call(docEl);
-  			} else {
-    			cancelFullScreen.call(doc);
-  			}
-			}
-		</script>
+ 		document.getElementById(cityName).style.display = "block";  
+	}
+	function fullscreen() {
+  	var doc = window.document;
+  	var docEl = doc.documentElement;
+  	var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+  	var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+  	if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+    	requestFullScreen.call(docEl);
+  	} else {
+    	cancelFullScreen.call(doc);
+  	}
+	}
+</script>
   </body>
 </html>

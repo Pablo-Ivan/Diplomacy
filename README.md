@@ -1,2 +1,2 @@
 # Diplomacy
-The Academic App
+The Academic App for the Future Schools.

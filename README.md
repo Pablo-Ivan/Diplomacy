@@ -1,2 +1,2 @@
 # Diplomacy
-An academic app.
+The Academic App

@@ -1,10 +1,165 @@
 <!DOCTYPE html>
-<html lang="en-US">
-	<head>
-		<meta charset="utf-8">
-		<title>Diplomacy</title>
-	</head>
-	<body>
-		<pre>Site under Construction</pre>
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Una App Académica">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Diplomacy</title>
+    <link rel="icon" href="fixedlogo.jpg">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Pablo-Ivan/pablo-ivan.github.io/master/stylesheets/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+		<script>
+			(function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-67193166-1', 'auto');
+    ga('send', 'pageview');
+		</script>
+		<script id="hull-js-sdk" platform-id="571da35d7a9433823100000f" org-url="https://322c4bef.hullapp.io" src="https://js.hull.io/0.9.0/hull.js.gz"></script>
+  </head>
+  <body>
+<div id="main" class="w3-center">
+<header class="w3-container w3-teal">
+  <img height="200px" class="w3-round" src="logo.jpg">
+	<h5 class="w3-center">An Academic App</h5>
+</header>
+<div class="w3-container">
+  <button class="w3-btn-block" onclick="fullscreen()">Fullscreen</button>
+  <p class="w3-justify">
+		Diplomacy es una aplicación que surge con la creciente adicción a 
+		los medios tecnológicos como lo son el celular y la computadora. 
+		Los estudiantes de este mundo moderno pierden el interés en el aprendizaje clásico y gradualmente se va 
+		haciendo la transición en las escuelas de lo antiguo a lo moderno. 
+		Diplomacy busca facilitar el cambio y brindar una herramienta útil y relevante tanto al estudiante como al profesor.
+		Hemos decidido crear Diplomacy porque es una necesidad que no se tendrá a largo plazo, pues es inmediata.
+		<a href="https://pablo-ivan.github.io/">Página Principal</a>
+	</p>
+	<!--tabs-->
+	<h2>Situaciones de Uso</h2>
+	<ul class="w3-navbar w3-teal">
+  	<li>
+			<a href="#" onclick="openCity('Español')">Español</a>
+		</li>
+  	<li>
+			<a href="#" onclick="openCity('Matematicas')">Matemáticas</a>		</li>
+  	<li>
+			<a href="#" onclick="openCity('Historia')">Historia</a>
+		</li>
+		<li>
+			<a href="#" onclick="openCity('Ciencias')">Ciencias</a>
+		</li>
+	</ul>
+
+<div id="Español" class="w3-container city">
+  <h3>Español</h3>
+  <p class="w3-justify">
+  	En la clase se está viendo el tema del Vanguardismo, 
+  	sin embargo el profesor se da cuenta de que los estudiantes están en su celular, 
+  	este inmediatamente puede enviar documentos, notas o incluso alertas (para que el alumno preste atención) 
+  	directo a la aplicación que el usuario descargó. Así pues, 
+  	el alumno ve en tiempo real algunos ejercicios relacionados a vanguardismo y los resuelve para ser enviados al profesor.
+  </p>
+</div>
+
+<div id="Matematicas" class="w3-container city">
+  <h3>Matemáticas</h3>
+  <p class="w3-justify">
+  	El profesor puede enviar los ejercicios vistos en clase con ayuda del editor de ecuaciones, 
+  	y así los usuarios pueden tomar cuantas veces quieran repasos de la clase, además pueden entrar en el modo de entrenamiento, 
+  	y los pasos a resolver las ecuaciones se muestran. 
+  	Los usuarios también tienen foros dentro de la misma anotación para compartir sus soluciones o preguntar sus 
+  	dudas al resto de sus compañeros.
+  </p> 
+</div>
+
+<div id="Historia" class="w3-container city">
+  <h3>Historia</h3>
+  <p class="w3-justify">
+  	El tema es la llegada de Cortés, 
+  	el profesor de historia puede enviar a sus alumnos un mapa interactivo que muestra el paso de Hernán Cortés sobre la 
+  	ciudad de México. Además puede "marcar" algunas secciones en el mapa, cuando el usuario seleccione esa sección, 
+  	será llevado a algún ejercicio, video o artículo de interés.
+  </p>
+</div>
+	
+	<div id="Ciencias" class="w3-container city">
+		<h3>Ciencias</h3>
+		<p class="w3-justify">
+			En la clase de química se está viendo el balanceo de ecuaciones, 
+			el estudiante puede buscar en la biblioteca digital de Diplomacy el tema y recibe toda clase de información y guías, 
+			junto con los ejercicios que el profesor pueda poner.
+		</p>
+	</div>
+	<h2>
+		Lista de Espera
+	</h2>
+	<p class="w3-justify">
+		Subscribe to the updates.
+	</p>
+		<input required class="w3-input w3-center" id="userMail" placeholder="Correo Electrónico">
+		<button onclick="publicar()" class="w3-btn-block w3-round w3-hover-teal">Avisarme</button>
+</div>
+	<footer class="w3-container w3-padding-32 w3-center w3-opacity">
+    <p class="w3-center">
+    	© 2016. Pablo Ivan G. Soto. Aldo G. Cabrera Aguilera. 
+    	Erick M. M. Valdez. Elioth Fernando R. Rodriguez.
+    </p>
+  </footer>
+</div>
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCv9LgDPTeEmToZy_NEWHWWI52umDxARcA",
+    authDomain: "diploma-cy.firebaseapp.com",
+    databaseURL: "https://diploma-cy.firebaseio.com",
+    storageBucket: "diploma-cy.appspot.com",
+  };
+  firebase.initializeApp(config);
+  var listRef = firebase.database().ref();
+	var publicar = function() {
+		var mail = $('#userMail').val();
+		listRef.push({
+      email: mail,
+      user: "Yes"
+    });
+    $('#userMail').val('');
+    window.alert("¡Excelente! Te haremos saber cuando Diplomacy esté listo.");
+	}
+	listRef.on('child_added', function(snapshot) {
+    var message = snapshot.val();
+  });
+  openCity("Español");
+	function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+ 		document.getElementById(cityName).style.display = "block";  
+	}
+	function fullscreen() {
+  	var doc = window.document;
+  	var docEl = doc.documentElement;
+  	var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+  	var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+  	if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+    	requestFullScreen.call(docEl);
+  	} else {
+    	cancelFullScreen.call(doc);
+  	}
+	}
+</script>
+  </body>
 </html>

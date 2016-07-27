@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="Una App Académica">
+    <meta name="description" content="The Future Academic App">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Diplomacy</title>
@@ -36,32 +36,32 @@
 <div class="w3-container">
   <button class="w3-btn-block" onclick="fullscreen()">Fullscreen</button>
   <p class="w3-justify">
-		Diplomacy es una aplicación que surge con la creciente adicción a 
+		Diplomacy is a mobile application que surge con la creciente adicción a 
 		los medios tecnológicos como lo son el celular y la computadora. 
 		Los estudiantes de este mundo moderno pierden el interés en el aprendizaje clásico y gradualmente se va 
 		haciendo la transición en las escuelas de lo antiguo a lo moderno. 
 		Diplomacy busca facilitar el cambio y brindar una herramienta útil y relevante tanto al estudiante como al profesor.
 		Hemos decidido crear Diplomacy porque es una necesidad que no se tendrá a largo plazo, pues es inmediata.
-		<a href="https://pablo-ivan.github.io/">Página Principal</a>
+		<a href="https://pablo-ivan.github.io/">Home</a>
 	</p>
 	<!--tabs-->
-	<h2>Situaciones de Uso</h2>
+	<h2>Use Cases</h2>
 	<ul class="w3-navbar w3-teal">
   	<li>
-			<a href="#" onclick="openCity('Español')">Español</a>
+			<a href="#" onclick="openCity('Español')">Spanish</a>
 		</li>
   	<li>
-			<a href="#" onclick="openCity('Matematicas')">Matemáticas</a>		</li>
+			<a href="#" onclick="openCity('Matematicas')">Math</a>		</li>
   	<li>
-			<a href="#" onclick="openCity('Historia')">Historia</a>
+			<a href="#" onclick="openCity('Historia')">History</a>
 		</li>
 		<li>
-			<a href="#" onclick="openCity('Ciencias')">Ciencias</a>
+			<a href="#" onclick="openCity('Ciencias')">Science</a>
 		</li>
 	</ul>
 
 <div id="Español" class="w3-container city">
-  <h3>Español</h3>
+  <h3>Spanish</h3>
   <p class="w3-justify">
   	En la clase se está viendo el tema del Vanguardismo, 
   	sin embargo el profesor se da cuenta de que los estudiantes están en su celular, 
@@ -72,7 +72,7 @@
 </div>
 
 <div id="Matematicas" class="w3-container city">
-  <h3>Matemáticas</h3>
+  <h3>Math</h3>
   <p class="w3-justify">
   	El profesor puede enviar los ejercicios vistos en clase con ayuda del editor de ecuaciones, 
   	y así los usuarios pueden tomar cuantas veces quieran repasos de la clase, además pueden entrar en el modo de entrenamiento, 
@@ -83,7 +83,7 @@
 </div>
 
 <div id="Historia" class="w3-container city">
-  <h3>Historia</h3>
+  <h3>History</h3>
   <p class="w3-justify">
   	El tema es la llegada de Cortés, 
   	el profesor de historia puede enviar a sus alumnos un mapa interactivo que muestra el paso de Hernán Cortés sobre la 
@@ -93,7 +93,7 @@
 </div>
 	
 	<div id="Ciencias" class="w3-container city">
-		<h3>Ciencias</h3>
+		<h3>Science</h3>
 		<p class="w3-justify">
 			En la clase de química se está viendo el balanceo de ecuaciones, 
 			el estudiante puede buscar en la biblioteca digital de Diplomacy el tema y recibe toda clase de información y guías, 
@@ -101,13 +101,13 @@
 		</p>
 	</div>
 	<h2>
-		Lista de Espera
+		Waiting list
 	</h2>
 	<p class="w3-justify">
 		Subscribe to the updates.
 	</p>
-		<input required class="w3-input w3-center" id="userMail" placeholder="Correo Electrónico">
-		<button onclick="publicar()" class="w3-btn-block w3-round w3-hover-teal">Avisarme</button>
+		<input required class="w3-input w3-center" id="userMail" placeholder="Email">
+		<button onclick="publish()" class="w3-btn-block w3-round w3-hover-teal">Notify me</button>
 </div>
 	<footer class="w3-container w3-padding-32 w3-center w3-opacity">
     <p class="w3-center">
@@ -128,7 +128,7 @@
   };
   firebase.initializeApp(config);
   var listRef = firebase.database().ref();
-	var publicar = function() {
+	var publish = function() {
 		var mail = $('#userMail').val();
 		listRef.push({
       email: mail,

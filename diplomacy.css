@@ -1,0 +1,283 @@
+html {
+   margin: 0 auto;
+    height: auto;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #0f313b;
+    background-color: #fafafa;
+}
+
+html, body {
+    margin: 0 auto;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #1f969f;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    line-height: 1.75;
+    font-family: 'Open Sans', sans-serif;
+    color: #0f313b;
+}
+
+
+
+.container {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+
+
+
+header {
+    text-align: center;
+    margin: 0%;
+    padding: 5% 10%;
+    background-color: #06b3ba;
+}
+
+header h5 {
+    color: #0f313b;
+}
+
+header img {
+    height: 100%;
+    width: auto;
+}
+
+
+
+
+
+#landing {
+    display: block;
+}
+
+#info {
+    width: 35%;
+    margin: 10% 0% 5% 15%;
+    padding: 2% 0%;
+    float: left;
+}
+
+#iphone {
+    margin: 5% 5% 0% 5%;
+    float: right;
+}
+
+#iphone img {
+    height: 800px;
+    width: auto;
+}
+
+
+
+
+.clear {
+    clear: both;
+}
+
+
+
+
+
+#classes {
+    margin: 0% 15%;
+}
+
+#classes ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #06b3ba;
+    overflow: hidden;
+    width: 100%;
+}
+
+#classes li {
+    display: inline-block;
+}
+
+#classes li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+#classes li a:hover {
+    background-color: #0f313b;
+}
+
+.city {
+    margin-bottom: 10%;
+}
+
+
+
+
+
+
+#waiting-list {
+    margin: 0%;
+    padding: 2% 15% 4% 15%;
+    background-color: #06b3ba;
+    text-align: center;
+}
+
+#waiting-list h2 {
+    color: #0f313b;
+}
+
+#waiting-list button {
+    padding: 12px 16px;
+    background-color: #F2A43C;
+    color: rgba(15,49,59, 0.9);
+    border-style: none;
+    border-radius: 2%;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#waiting-list input {
+    width: 220px;
+    text-align: center;
+    padding: 12px 20px;
+    color: #0f313b;
+    border-style: none;
+    border-radius: 2%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+
+
+footer {
+    margin: 4% 2%;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #1f969f
+}
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    #landing {
+        display: inline;
+    }
+
+    #info {
+        width: 70%;
+        padding: 2% 0%;
+        float: none;
+    }
+
+    #iphone {
+        text-align: center;
+        margin: 5%;
+        float: none;
+    }
+
+    #iphone img {
+        height: 900px;
+        width: auto;
+    }
+}
+
+
+
+
+@media screen and (max-width: 620px) {
+    header {
+        padding: 5%;
+    }
+    
+    header img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+
+    #info {
+        width: auto;
+        margin: 5%;
+        float: none;
+    }
+
+    #iphone {
+        width: 100%;
+        margin: 0%;
+        float: none;
+    }
+
+    #iphone img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+    #classes {
+        margin: 0% 5%;
+    }    
+    #classes li {
+        display: block;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        border-bottom-color: #0f313b;
+    }
+    
+    #classes li:last-child {
+        border-bottom-style: none;
+    }
+
+    .city {
+        margin-bottom: 15%;
+    }
+    
+    #waiting-list {
+        padding: 2% 5% 4% 5%;
+        text-align: left;
+    }
+    
+    #waiting-list button {
+        margin-top: 3%;
+    }
+    
+    #waiting-list input {
+        max-width: 80%;
+    }
+    
+    footer {
+        margin: 5% 5% 10% 5%;
+    }
+}

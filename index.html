@@ -167,8 +167,8 @@
       
       
       
-<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-<script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
   // Initialize Firebase
   var config = {
@@ -176,6 +176,7 @@
     authDomain: "diploma-cy.firebaseapp.com",
     databaseURL: "https://diploma-cy.firebaseio.com",
     storageBucket: "diploma-cy.appspot.com",
+		messagingSenderId: "677636056651"
   };
   firebase.initializeApp(config);
   var listRef = firebase.database().ref();
